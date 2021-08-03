@@ -1,1 +1,1 @@
-Obtained files from the mothur wiki for recreated seed database.
+Obtained two files from the mothur wiki for recreated seed database.
