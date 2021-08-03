@@ -6,3 +6,6 @@ Author: Jadesola Alade-Fa
 Devoloped over a series of Code Club episodes led by Pat Schloss to answer
 an important question in microbiolog and develop comfort using tools to 
 develop reproducible research practices. 
+
+Dependencies: 
+mothur Version 1.45.3
