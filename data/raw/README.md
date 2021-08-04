@@ -1,5 +1,6 @@
-#### Obtained files from the rrnDB located at:
-https://rrndb.umms.med.umich.edu/static/download/
+#### READ ME
+
+Obtained files from the [rrnDB](https://rrndb.umms.med.umich.edu/static/download/)
 
 Files are from **version 5.7.** released in 2021.
 

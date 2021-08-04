@@ -1,5 +1,4 @@
-Two files were obtained from the mothur wiki for recreated seed database:
-* https://mothur.org/wiki/silva_reference_files/
+Two files were obtained from the [mothur wiki](https://mothur.org/wiki/silva_reference_files/) for recreated seed database.
 
 Used **wget**, **mkdir**, and **tar** to download and extract silva seed reference files to `data/references/silva_seed`
 ```
