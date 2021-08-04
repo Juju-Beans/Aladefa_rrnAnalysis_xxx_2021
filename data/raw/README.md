@@ -17,6 +17,6 @@ unzip -n -d data/raw/ data/raw/rrnDB-5.7_pantaxa_stats_NCBI.tsv.zip
 wget -P data/raw/ rrnDB-5.7.tsv.zip -nc https://rrndb.umms.med.umich.edu/static/download/rrnDB-5.7_pantaxa_stats_RDP.tsv.zip
 unzip -n -d data/raw/ data/raw/rrnDB-5.7_pantaxa_stats_RDP.tsv.zip
 
-See wget --help and unzip --help for usage details.
+See wget --help and unzip --help for details on how to use either funtion.
 
 
