@@ -5,7 +5,7 @@
 #         data/reference/silva.seed_v138_1.align
 #outputs: ata/raw/rrnDB-5.7_16S_rRNA.align
 #
-#We need to include flip=T to make sure all sequences are pointing in the same
+#The scripts must include flip=T to make sure all sequences are pointing in the same
 #direction.
 #
 
