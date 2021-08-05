@@ -7,5 +7,5 @@ wget -P data/references -nc https://mothur.s3.us-east-2.amazonaws.com/wiki/silva
 
 mkdir data/references/silva_seed
 
-tar xvzf data/references/silva.seed_v138_1.tgz -C data/references silva_seed
+tar xvzf data/references/silva.seed_v138_1.tgz -C data/references/silva_seed
 ```

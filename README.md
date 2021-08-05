@@ -6,4 +6,5 @@ Developed over a series of *Code Club* episodes led by Pat Schloss to answer an 
 develop reproducible research practices.
 
 ##### Dependencies:  
-* [mothur Version 1.45.3](https://github.com/mothur/mothur/tree/v1.45.3)
+* [mothur Version 1.45.3](https://github.com/mothur/mothur/tree/v1.45.3) - `code/get_mothur.sh` installs mothur
+* `weget`
