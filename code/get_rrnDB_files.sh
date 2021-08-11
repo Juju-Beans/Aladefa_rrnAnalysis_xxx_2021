@@ -20,4 +20,6 @@ if [[ $? -eq 0 ]]
 then
   touch "$target"
 else
-  echo "Fail: Unable to unzip and extract $target"
+  echo "Fail: Unable to unzip and extract $filename"
+  exit 1
+fi
