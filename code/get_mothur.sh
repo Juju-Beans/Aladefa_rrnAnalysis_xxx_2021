@@ -16,7 +16,7 @@ unzip -n -d code/ code/mothur/Mothur.win.zip
 
 if [[ $? -eq 0 ]]
 then
-  touch code/mothur/mothur/
+  touch code/mothur/mothur
 else
   echo "Fail: Unable to install mothur"
   exit 1
