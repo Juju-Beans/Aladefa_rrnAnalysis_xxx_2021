@@ -33,7 +33,6 @@ elif [[ "$region" = "v45" ]]
       start=13862
       end=27659
       echo "region: $region"
-
 else
   echo "FAIL: We don't have the coordinates for $region"
   exit 1
