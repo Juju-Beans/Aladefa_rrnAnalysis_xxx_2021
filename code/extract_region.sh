@@ -42,17 +42,35 @@ mkdir -p $path
 
 code/mothur/mothur "#pcr.seqs(fasta=data/raw/rrnDB-5.7_16S_rRNA.align, start=$start, end=$end, outputdir=$path); filter.seqs(vertical=TRUE)"
 
+
+# grep -v "^>" data/v4/rrnDB-5.7_16S_rRNA.pcr.filter.fasta | grep "\."
+
 #if mothur executed successfully, then touch the files that migh not have been
 #generated in pcr.seqs becasue the sequences spanned the desired region'#!/bin/sh
 #coordinates
 
 if [[ $? -eq 0 ]]
 then
-  sed 's/^\.+/-/' $path/rrnDB-5.7_16S_rRNA.pcr.filter.fasta >  $path/rrnDB-5.7_16S_rRNA.pcr.filter.test.fasta
+  #sed '/^[^>]/ s/\./-/g' $path/rrnDB-5.7_16S_rRNA.pcr.filter.fasta >  $path/rrnDB-5.7_16S_rRNA.pcr.filter.test.fasta
+
+  #See #18 (cc023)
+  # sed 's/^\.+/-/' test.fasta # bare bones starting test file sed code
+  # sed '/>/ !s/\./-/g' test.fasta #returns correct seq but ? portability
+  # grep "^[^>]" test.fasta | sed '/^[^>]/ s/\./-/g' test.fasta #rtrns correct seq; see line 68
+  cp $path/rrnDB-5.7_16S_rRNA.pcr.filter.fasta $path/rrnDB-5.7_16S_rRNA.pcr.filter.test.fasta
+
   touch $path/rrnDB-5.7_16S_rRNA.bad.accnos
   touch $path/rrnDB-5.7_16S_rRNA.scrap.pcr.align
 else
   echo "Fail: mothur ran into problem"
+  exit 1
+fi
+
+TEST=grep -v "^>" data/v4/rrnDB-5.7_16S_rRNA.pcr.filter.test.fasta | grep -c "\."
+
+if [[ $TEST -ne 0 ]]
+then
+  echo "FAIL: sequences contained periods"
   exit 1
 fi
 
